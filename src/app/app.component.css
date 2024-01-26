@@ -1,0 +1,17 @@
+.container{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-image: linear-gradient(rgb(255, 255, 255), lightcyan);
+}
+a{
+    margin: 6px;
+}
+nav, a{
+    font-size: x-large;
+    color: rgb(1, 196, 196);
+}
+a{
+    padding-right: 20px;
+}

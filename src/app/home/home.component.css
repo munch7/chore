@@ -1,0 +1,19 @@
+p{
+    font-size: x-large;
+    width: 80%;
+    padding: 20px;
+}
+li{
+    background-color: transparent;
+    border: none;
+}
+ul{
+    list-style-type: none;
+}
+button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background: cyan;
+    border: none;
+}
