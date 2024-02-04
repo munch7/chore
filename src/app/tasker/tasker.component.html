@@ -2,7 +2,7 @@
   <h1>SIGN UP AS A TASKER AND GET JOBS</h1>
 
   <div class="col-md-6">
-    <form [formGroup]="yourFormGroup" (ngSubmit)="onSubmit()">
+    <form [formGroup]="yourFormGroup" (ngSubmit)="onSubmit()" style="padding: 10px;">
       <div class="col-xs-12">
         <div class="form-group">
           <label for="name">Enter your Name</label>
@@ -53,8 +53,19 @@
           <option>Home Repairer</option>
         </select>
       </div>
+      <div class="col-xs-12">
+        <div class="form-group">
+            <label for="description" style="padding: 10px;">Write a description of your work</label>
+            <textarea
+            type="text"
+            id="description"
+            formControlName="description"
+            class="form-control"
+            rows="4"></textarea>
+        </div>
+      </div>
       <!-- <button type="submit">Submit</button> -->
-      <button type="button" class="btn btn-primary" (click)="onSubmit()">Sign up</button>
+      <button type="button" class="btn btn-primary" (click)="onSubmit()" style="margin: 20px;">Sign up</button>
     </form>
   </div>
 
@@ -87,11 +98,15 @@
   <div class="col-md-12">
     <!-- <button type="button" class="btn btn-primary" (click)="getFormData()">Show Taskers</button> -->
     <h2>Taskers Available</h2>
-    <div *ngFor="let post of posts" class="col-md-4 col-sm-6 col-xs-12">
-      <p>Name: {{ post.name }}</p>
-      <p>Contact: {{ post.contact }}</p>
-      <p>Location: {{ post.location }}</p>
-      <p>Skill: {{ post.skill }}</p>
+    <div *ngFor="let post of posts">
+      <div class="col-md-3" style="padding: 10px;">
+        <div class="col-md-10 col-md-offset-1" style="background: white; padding: 20px;">
+          <p><b>Name:</b> {{ post.name }}</p>
+          <p><b>Contact:</b> {{ post.contact }}</p>
+          <p><b>Location:</b> {{ post.location }}</p>
+          <p><b>Skill:</b> {{ post.skill }}</p>
+        </div>
+      </div>
     </div>
   </div>
   <hr>

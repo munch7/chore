@@ -36,6 +36,7 @@ export class TaskerComponent {
       contact: ['', [Validators.required, this.contactValidator]],
       location: ['', Validators.required],
       skill: ['', Validators.required],
+      description: ['', Validators.required]
     });
   }
 
@@ -65,12 +66,6 @@ export class TaskerComponent {
     );    
   }  
   
-  // getFormData() {
-  //   this.http.get('https://monkey-ec249-default-rtdb.europe-west1.firebasedatabase.app/form-data.json')
-  //   .subscribe(posts => {
-  //     console.log(posts);
-  //   });
-  // }
   getFormData() {
     this.http.get('https://monkey-ec249-default-rtdb.europe-west1.firebasedatabase.app/form-data.json')
       .subscribe((data: any) => {

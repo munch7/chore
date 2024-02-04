@@ -1,9 +1,15 @@
+@font-face {
+    font-family: myFont;
+    src: url(../assets/Shantell_Sans/static/ShantellSans-Regular.ttf);
+}
+
 .container{
     height: 100%;
     width: 100%;
     padding: 0px;
     margin: 0px;
     background-image: linear-gradient(rgb(255, 255, 255), lightcyan);
+    font-family: myFont;
 }
 a{
     margin: 6px;

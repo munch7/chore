@@ -1,1 +1,32 @@
-<p>client works!</p>
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12">
+        <label for="selectedSkill">Select a skill</label>
+        <select id="selectedSkill" class="form-control" [(ngModel)]="selectedSkill" style="margin: 10px;">
+            <option value="">--All Skills--</option>
+            <option>Electrician</option>
+            <option>Plumber</option>
+            <option>Delivery / Errands</option>
+            <option>Decorator</option>
+            <option>House / Pet sitter</option>
+            <option>Assembly / Mounting</option>
+            <option>Mover</option>
+            <option>Cleaner</option>
+            <option>Out door helper</option>
+            <option>Home Repairer</option>
+        </select>
+        <button type="button" class="btn btn-primary" (click)="filterBySkill()" style="margin: 10px;">Filter Taskers</button>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div *ngFor="let post of filteredPosts">
+            <div class="col-md-3 col-sm-4" style="padding: 10px;">
+              <div class="col-md-10 col-md-offset-1" style="background: white; padding: 26px; height: 200px;">
+                <p><b>Name:</b> {{ post.name }}</p>
+                <p><b>Contact:</b> {{ post.contact }}</p>
+                <p><b>Location:</b> {{ post.location }}</p>
+                <p><b>Description:</b> {{ post.description }}</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
